@@ -169,7 +169,7 @@ abstract class BaseStorage
     {
         switch ($this->config('options.searchMode')) {
             case self::SEARCH_MODE_START_WITH:
-                return starts_with(mb_strtolower($filename), mb_strtolower($string));
+                return str_starts_with(mb_strtolower($filename), mb_strtolower($string));
             case self::SEARCH_MODE_WILDCARD:
                 return fnmatch(mb_strtolower($string), mb_strtolower($filename));
             default:

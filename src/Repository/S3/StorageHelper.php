@@ -397,7 +397,7 @@ class StorageHelper
     {
         // specifying both ACL and Grant... options is not allowed
         foreach ($options as $name => $value) {
-            if (starts_with($name, 'Grant')) {
+            if (str_starts_with($name, 'Grant')) {
                 return $options;
             }
         }
